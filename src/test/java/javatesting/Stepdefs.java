@@ -36,7 +36,7 @@ class IsDXThere {
 
     String dx = "Nikon D3X";
 
-    //List all elements with the fraze in variable dx
+    //List all elements with the content of variable dx
     List<WebElement> list = driver.findElements(By.xpath("//*[contains(text(),'" + dx + "')]"));
     if(list.size() > 0) {
       driver.close();
@@ -53,8 +53,8 @@ public class Stepdefs {
     private String value;
     private String ret;
 
-    @Given("Search fraze")
-    public void search_fraze() {
+    @Given("Search keyword")
+    public void search_keyword() {
         value = "Not found";
     }
 
